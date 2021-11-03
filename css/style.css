@@ -14,7 +14,7 @@
     --fw-bold: 900;
     
     --clr-light: #fff;
-    --clr-dark: #303030;
+    --clr-dark: #0D1B2A;
     --clr-accent: #16e0bd;
     
     --fs-h1: 3rem;
@@ -38,9 +38,9 @@
 /* General styles */
 
 /* endable this to add smooth scrolling */
-/* html {
+html {
     scroll-behavior: smooth;
-} */
+}
 
 
 body {
@@ -266,23 +266,17 @@ header {
         margin: 0 auto;
         grid-column-gap: 1em;
         grid-template-areas: 
-            "img title"
-            "img subtitle";
+            "title title"
+            "subtitle  subtitle"
+            "btn1 btn2";
         grid-template-columns: min-content max-content;
     }
-    
-    .intro__img {
-        grid-area: img;
-        min-width: 250px;
-        position: relative;
-        z-index: 2;
-    }    
-    
+       
     .section__subtitle--intro {
         align-self: start;
         grid-column: -1 / 1;
         grid-row: 2;
-        text-align: right;
+        text-align: center;
         position: relative;
         left: -1.5em;
         width: calc(100% + 1.5em);
@@ -290,57 +284,19 @@ header {
 }
 
 
-
-/*  My services section  */
-
-.my-services {
+.about-me{
+    width: 100%;
     background-color: var(--clr-dark);
-    background-image: url(../img/services-bg.jpg);
+    opacity: 1;
+    color: var(--clr-light);
+    background-image: url(../img/journeys-bg.jpg);
     background-size: cover;
     /* background-blend-mode: multiply; */
     color: var(--clr-light);
     text-align: center;
 }
 
-.section__title--services {
-    color: var(--clr-accent);
-    position: relative;
-}
-
-.section__title--services::after {
-    content: '';
-    display: block;
-    width: 2em;
-    height: 1px;
-    margin: 0.5em auto 1em;
-    background: var(--clr-light);
-    opacity: 0.25;
-}
-
-.services {
-    margin-bottom: 4em;
-}
-
-.service {
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-@media (min-width: 800px) {
-    .services {
-        display: flex;
-        max-width: 1000px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    .service + .service {
-        margin-left: 2em;
-    }
-}
-
-
-.about-me {
+.about-me__content {
     max-width: 1000px;
     margin: 0 auto;
 }
@@ -350,7 +306,7 @@ header {
 }
 
 @media (min-width: 600px) {
-    .about-me {
+    .about-me__content {
         display: grid;
         grid-template-columns: 1fr 200px;
         grid-template-areas: 
@@ -372,6 +328,7 @@ header {
         width: calc(100% + 2em);
         padding-left: 1em;
         padding-right: calc(200px + 4em);
+        color: var(--clr-dark);
     }
     
     .about-me__img {
@@ -476,3 +433,248 @@ header {
     margin-left: auto;
     margin-right: auto;
 }
+
+
+
+
+
+
+
+
+
+
+
+/* Timeline CSS */
+/*
+!!!!
+This pen is being refactored
+!!!!
+*/
+
+/*
+=====
+DEPENDENCES
+=====
+*/
+
+.r-title{
+    margin-top: var(--rTitleMarginTop, 0) !important;
+    margin-bottom: var(--rTitleMarginBottom, 0) !important;
+  }
+  
+  
+  p:not([class]){
+    line-height: var(--cssTypographyLineHeight, 1.78);
+    margin-top: var(--cssTypographyBasicMargin, 1em);
+    margin-bottom: 0;
+  }
+  
+  p:not([class]):first-child{
+    margin-top: 0;
+  }
+  
+  /*
+  text component
+  */
+  
+  .text{
+    display: var(--textDisplay, inline-flex);
+    font-size: var(--textFontSize, 1rem);  
+  }
+  
+  /*
+  time component
+  */
+  
+  /*
+  core styles
+  */
+  
+  .time{
+    display: var(--timeDisplay, inline-flex);
+  }
+  
+  /*
+  extensions
+  */
+  
+  .time__month{
+    margin-left: var(--timelineMounthMarginLeft, .25em);
+  }
+  
+  /*
+  skin
+  */
+  
+  .time{
+    padding: var(--timePadding, .25rem 1.25rem .25rem);
+    background-color: var(--timeBackgroundColor, #f0f0f0);
+  
+    font-size: var(--timeFontSize, .75rem);
+    font-weight: var(--timeFontWeight, 700);
+    text-transform: var(--timeTextTransform, uppercase);
+    color: var(--timeColor, currentColor);
+  }
+  
+  /*
+  card component
+  */
+  
+  /*
+  core styles
+  */
+  
+  .card{
+    padding: var(--timelineCardPadding, 1.5rem 1.5rem 1.25rem);
+  }
+  
+  .card__content{
+    margin-top: var(--cardContentMarginTop, .5rem);
+  }
+  
+  /*
+  skin
+  */
+  
+  .card{
+    border-radius: var(--timelineCardBorderRadius, 2px);
+    border-left: var(--timelineCardBorderLeftWidth, 3px) solid var(--timelineCardBorderLeftColor, var(--uiTimelineMainColor));
+    box-shadow: var(--timelineCardBoxShadow, 0 1px 3px 0 rgba(0, 0, 0, .12), 0 1px 2px 0 rgba(0, 0, 0, .24));
+    background-color: var(--timelineCardBackgroundColor, #fff);
+  }
+  
+  /*
+  extensions
+  */
+  
+  .card__title{
+    --rTitleMarginTop: var(--cardTitleMarginTop, 1rem);
+    font-size: var(--cardTitleFontSize, 1.25rem);
+  }
+  
+  /*
+  =====
+  CORE STYLES
+  =====
+  */
+  
+  .timeline{
+    display: var(--timelineDisplay, grid);
+    grid-row-gap: var(--timelineGroupsGap, 2rem);
+  }
+  
+  /*
+  1. If timeline__year isn't displaed the gap between it and timeline__cards isn't displayed too
+  */
+  
+  .timeline__year{
+    margin-bottom: 1.25rem; /* 1 */
+  }
+  
+  .timeline__cards{
+    display: var(--timeloneCardsDisplay, grid);
+    grid-row-gap: var(--timeloneCardsGap, 1.5rem);
+  }
+  
+  
+  /*
+  =====
+  SKIN
+  =====
+  */
+  
+  .timeline{
+    --uiTimelineMainColor: var(--timelineMainColor, #222);
+    --uiTimelineSecondaryColor: var(--timelineSecondaryColor, #fff);
+  
+    border-left: var(--timelineLineWidth, 3px) solid var(--timelineLineBackgroundColor, var(--uiTimelineMainColor));
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+  }
+  
+  .timeline__year{
+    --timePadding: var(--timelineYearPadding, .5rem 1.5rem);
+    --timeColor: var(--uiTimelineSecondaryColor);
+    --timeBackgroundColor: var(--uiTimelineMainColor);
+    --timeFontWeight: var(--timelineYearFontWeight, 400);
+  }
+  
+  .timeline__card{
+    position: relative;
+    margin-left: var(--timelineCardLineGap, 1rem);
+  }
+  
+  /*
+  1. Stoping cut box shadow
+  */
+  
+  .timeline__cards{
+    overflow: hidden;
+    padding-top: .25rem; /* 1 */
+    padding-bottom: .25rem; /* 1 */
+  }
+  
+  .timeline__card::before{
+    content: "";
+    width: 100%;
+    height: var(--timelineCardLineWidth, 2px);
+    background-color: var(--timelineCardLineBackgroundColor, var(--uiTimelineMainColor));
+  
+    position: absolute;
+    top: var(--timelineCardLineTop, 1rem);
+    left: -50%;
+    z-index: -1;
+  }
+  
+  /*
+  =====
+  SETTINGS
+  =====
+  */
+  /**/
+  .timeline{
+    --timelineMainColor: #4557bb;
+  }
+  
+  /*
+  =====
+  DEMO
+  =====
+  */
+  
+  body{
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Open Sans, Ubuntu, Fira Sans, Helvetica Neue, sans-serif;
+    color: #222;
+  
+    background-color: #f0f0f0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  p{
+    margin-top: 0;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+  
+  p:last-child{
+    margin-bottom: 0;
+  }
+  
+  .page{
+    max-width: 47rem;
+    padding: 5rem 2rem 3rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  
+  .substack{
+    border:1px solid #EEE; 
+    background-color: #fff;
+    width: 100%;
+    max-width: 480px;
+    height: 280px;
+    margin: 1rem auto;;
+  }
