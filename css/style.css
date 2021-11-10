@@ -402,7 +402,7 @@ header {
   margin: 0 auto;
 }
 
-.portfolio-item-individual p, .portfolio-item-individual ul, .portfolio-item-individual h3 {
+.portfolio-item-individual p, .portfolio-item-individual ul, .portfolio-item-individual h3, .portfolio-item-individual ol {
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
