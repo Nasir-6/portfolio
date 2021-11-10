@@ -409,9 +409,9 @@ header {
 }
 
 .portfolio-item-individual img, .portfolio-item-individual video {
-  padding-bottom: 1em;
   max-height: 500px;
   margin: auto;
+  margin-bottom: 1em;
 }
 
 
