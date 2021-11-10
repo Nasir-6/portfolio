@@ -55,7 +55,7 @@ section {
   padding: 5em 2em;
 }
 
-img {
+img, video {
   display: block;
   max-width: 100%;
 }
@@ -408,8 +408,10 @@ header {
   margin-right: auto;
 }
 
-.portfolio-item-individual img {
+.portfolio-item-individual img, .portfolio-item-individual video {
   padding-bottom: 1em;
+  max-height: 500px;
+  margin: auto;
 }
 
 
