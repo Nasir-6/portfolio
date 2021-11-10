@@ -267,7 +267,7 @@ header {
   display: inline-block;
 }
 
-@media (min-width: 450px) {
+@media (min-width: 600px) {
   .intro {
     width: max-content;
     text-align: left;
@@ -434,7 +434,7 @@ header {
   display: inline-block;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 1000px) {
   .intro {
       display: grid;
       width: min-content;
