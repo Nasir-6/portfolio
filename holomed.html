@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mohammed Nasir</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />  
+        
+        <!-- Update these with your own fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <a href="/"><img src="img/logo.png" alt=""></a>
+            </div>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="index.html#about" class="nav__link">About me</a></li>
+                    <li class="nav__item"><a href="index.html#work" class="nav__link">My Work</a></li>
+                    <!-- <li class="nav__item"><a href="#journeys" class="nav__link">My Programming Journey</a></li> -->
+                </ul>
+            </nav>
+        </header>
+        
+
+        <section class="intro">
+            <h1 class="section__title section__title--intro">
+                HOLOMED<strong>Unity AR App</strong>
+            </h1>
+            <p class="section__subtitle section__subtitle--intro" style="color:#16e0bd">.</p>
+            <img src="img/holomed-img.jpeg" alt="" class="intro__img">
+        </section>
+        
+        <div class="portfolio-item-individual">
+            <p>This Augmented Reality (AR) app was produced as a supporting application for my 3rd year Design and Manufacture group project. As a group of 5 we were tasked with manufacturing a mechanical arm attachment to enable the precise positioning of a specially designed steerable needle for "minimally invasive treatment in neurosurgery", courtesy of the <a href="https://www.eden2020.eu/" target="_blank"><strong>EDEN2020 project.</strong></a></p>
+            <p>As an additional part of the project an AR app was to be created which assisted the neurosurgical procedure by allowing the surgeon to:</p>
+            <ol>
+                <li>Visualise the internal structures of the head</li>
+                <li>Crop out the most viable area of entry with a tracked stylus which would then be processed by a path planning algorithm (Courtesy of the EDEN2020 team) providing the 10 most optimal paths to the tumor from the entry region</li>
+                <li>Choose the best path from amongst the 10 optimal paths</li>
+                <li>Finally align the mechanical arm attachment (trochar holder) with the aid of a guiding system shown via the app</li>
+            </ol>
+            
+            <p>The app was created using Unity/C# and used the Vuforia AR engine to enable the realisation of the above features. My role was to create the UI features guiding the surgeon through all 4 stages of the procedure. </p>
+            <p><strong>Important Note:</strong> Due to the Covid lockdown the project could not use the envisioned Infrared (IR) tracking system provided by the EDEN 2020 team which dealt a huge blow to the project. However, in order to present the potential promise of the application within the limitations of our homes, we decided to replace the IR tracking system with that of a card tracking system as shown in the demo below.</p>
+            <video controls>
+                <source src="img/HolomedDemo.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <h3>What did I learn?</h3>
+            <ul>
+                <li>How to use C# within the development of a Unity app</li>
+                <li>How to use the Vuforia AR Engine to display 3d models onto the camera view</li>
+                <li>The use of objects, classes (private and public), arrays, lists, public and private variables</li>
+                <li>Creating scenes and UI features within Unity apps</li>
+                <li>Introduction to cloud version control via the Unity Hub collaborative features</li>
+                <li>3D modelling nuances such as vectors and quartenions</li>
+                <li>How to deploy a live Unity app</li>
+                <li>The importance of researching into whether the app will actually run on the intended device, especially given the requirements of AR features</li>
+            </ul>
+        </div>
+        
+        
+         <!-- Footer -->
+         <footer class="footer">
+            <!-- replace with your own email address -->
+            <a href="mailto:mfi17@imperial.ac.uk" class="footer__link">mfi17@imperial.ac.uk</a>
+            <ul class="social-list">
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://www.linkedin.com/in/mohammed-farhadul-islam-nasir-553338158/">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+                 
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://github.com/Nasir-6">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+            </ul>
+        </footer>
+        
+        
+        <script src="js/index.js"></script>
+        
+    </body>
+</html>
