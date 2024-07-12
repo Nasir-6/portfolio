@@ -22,8 +22,7 @@
   --fs-h3: 1.15rem;
   --fs-body: 1rem;
 
-  --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
-    0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
+  --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25), 0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
 }
 
 @media (min-width: 800px) {
@@ -55,7 +54,8 @@ section {
   padding: 5em 2em;
 }
 
-img, video {
+img,
+video {
   display: block;
   max-width: 100%;
 }
@@ -88,7 +88,6 @@ strong {
 .btn:hover {
   transform: scale(1.1);
 }
-
 
 a {
   color: inherit;
@@ -299,6 +298,10 @@ header {
   margin: 0 auto;
 }
 
+.about-me__body {
+  text-align: justify;
+}
+
 .section__subtitle--about {
   color: var(--clr-dark);
 }
@@ -402,23 +405,24 @@ header {
   margin: 0 auto;
 }
 
-.portfolio-item-individual p, .portfolio-item-individual ul, .portfolio-item-individual h3, .portfolio-item-individual ol {
+.portfolio-item-individual p,
+.portfolio-item-individual ul,
+.portfolio-item-individual h3,
+.portfolio-item-individual ol {
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.portfolio-item-individual img, .portfolio-item-individual video {
+.portfolio-item-individual img,
+.portfolio-item-individual video {
   max-height: 500px;
   margin: auto;
   margin-bottom: 1em;
 }
 
-
 /* Timeline CSS */
 /* https://codepen.io/melnik909/pen/qPjwvq */
-
-
 
 /* PORTFOLIO ITEM CODE */
 
@@ -438,30 +442,30 @@ header {
 
 @media (min-width: 1000px) {
   .intro {
-      display: grid;
-      width: min-content;
-      margin: 0 auto;
-      grid-column-gap: 1em;
-      grid-template-areas: 
-          "img title"
-          "img subtitle";
-      grid-template-columns: min-content max-content;
+    display: grid;
+    width: min-content;
+    margin: 0 auto;
+    grid-column-gap: 1em;
+    grid-template-areas:
+      "img title"
+      "img subtitle";
+    grid-template-columns: min-content max-content;
   }
-  
+
   .intro__img {
-      grid-area: img;
-      min-width: 250px;
-      position: relative;
-      z-index: 2;
-  }    
-  
+    grid-area: img;
+    min-width: 250px;
+    position: relative;
+    z-index: 2;
+  }
+
   .section__subtitle--intro {
-      align-self: start;
-      grid-column: -1 / 1;
-      grid-row: 2;
-      text-align: right;
-      position: relative;
-      left: -1.5em;
-      width: calc(100% + 1.5em);
+    align-self: start;
+    grid-column: -1 / 1;
+    grid-row: 2;
+    text-align: right;
+    position: relative;
+    left: -1.5em;
+    width: calc(100% + 1.5em);
   }
 }
